@@ -9,7 +9,7 @@ The fullscreen carousel was taken from [http://www.responsivewebmobile.com/posts
 
 ## Build the page
 
-Edit the _masthead.html partial to suit your search.
+Edit the _head.html partial to suit your search.
 
     bundle install
     ruby ./search.rb "bamboo forest"

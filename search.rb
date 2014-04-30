@@ -20,7 +20,7 @@ def write_content(image_uris)
 
       file.write %(      <div class="#{classes.join(' ')}">\n)
       file.write %(        <img src="#{uri}" alt="">\n)
-      file.write %(      </div>\n)
+      file.write %(      </div>\n\n)
     end
   end
 end
@@ -28,11 +28,6 @@ end
 def build_html
   File.open("www/index.html", 'w+') do |file|
     file.write open("partials/_head.html").read
-
-    if File.exists?("partials/_masthead.html")
-      file.write open("partials/_masthead.html").read
-    end
-
     file.write open("tmp/_body.html").read
     file.write open("partials/_footer.html").read
   end
