@@ -1,8 +1,6 @@
-@media (max-width: 768px) {
-	body {
-		margin: 0;
-		padding: 0;
-	}
+body {
+	margin: 0;
+	padding: 0;
 }
 
 .masthead {
@@ -17,6 +15,33 @@
 }
 
 .masthead div {
-    padding-left: 50px;
+  padding-left: 50px;
   padding-right: 50px;
 }
+
+.carousel.c-fade .item {
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.carousel.c-fade .active.left,
+.carousel.c-fade .active.right {
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.carousel.c-fade .next,
+.carousel.c-fade .prev {
+  left: 0;
+  z-index: 1;
+}
+
+.carousel.c-fade .carousel-control {
+  z-index: 3;
+}
+
